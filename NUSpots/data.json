@@ -1,0 +1,120 @@
+{
+  "buildings": [
+    {
+      "b_id": "CSC",
+      "name": "Curry Student Center",
+      "latitude": 42.338979,
+      "longitude": -71.087465,
+      "hours": [
+        {
+          "open": "07:00",
+          "close": "00:00"
+        },
+        {
+          "open": "07:00",
+          "close": "00:00"
+        },
+        {
+          "open": "07:00",
+          "close": "00:00"
+        },
+        {
+          "open": "07:00",
+          "close": "00:00"
+        },
+        {
+          "open": "07:00",
+          "close": "00:00"
+        },
+        {
+          "open": "07:00",
+          "close": "00:00"
+        },
+        {
+          "open": "07:00",
+          "close": "00:00"
+        }
+      ],
+      "spaces": [
+        {
+          "s_id": "CSC|1",
+          "name": "First Floor",
+          "occupancy": 10,
+          "capacity": 100,
+          "eating": true,
+          "quiet": false
+        },
+        {
+          "s_id": "CSC|2",
+          "name": "Second Floor",
+          "occupancy": 10,
+          "capacity": 100,
+          "eating": false,
+          "quiet": true
+        }
+      ]
+    },
+    {
+      "b_id": "RY",
+      "name": "Ryder Hall",
+      "latitude": 42.336582,
+      "longitude": -71.090671,
+      "hours": [
+        {
+          "open": "08:00",
+          "close": "20:00"
+        },
+        {
+          "open": "08:00",
+          "close": "20:00"
+        },
+        {
+          "open": "08:00",
+          "close": "20:00"
+        },
+        {
+          "open": "08:00",
+          "close": "20:00"
+        },
+        {
+          "open": "08:00",
+          "close": "20:00"
+        },
+        {
+          "open": "08:00",
+          "close": "20:00"
+        },
+        {
+          "open": "08:00",
+          "close": "20:00"
+        }
+      ],
+      "spaces": [
+        {
+          "s_id": "RY|1|120",
+          "name": "Room 120",
+          "occupancy": 0,
+          "capacity": 10,
+          "eating": false,
+          "quiet": false
+        },
+        {
+          "s_id": "RY|2|202",
+          "name": "Room 202",
+          "occupancy": 1,
+          "capacity": 10,
+          "eating": false,
+          "quiet": false
+        },
+        {
+          "s_id": "RY|3|316",
+          "name": "Room 316",
+          "occupancy": 8,
+          "capacity": 8,
+          "eating": false,
+          "quiet": false
+        }
+      ]
+    }
+  ]
+}

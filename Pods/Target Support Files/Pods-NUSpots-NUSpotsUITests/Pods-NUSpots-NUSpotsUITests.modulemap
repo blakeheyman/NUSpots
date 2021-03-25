@@ -1,0 +1,6 @@
+framework module Pods_NUSpots_NUSpotsUITests {
+  umbrella header "Pods-NUSpots-NUSpotsUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
