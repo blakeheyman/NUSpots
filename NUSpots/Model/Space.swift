@@ -12,6 +12,5 @@ class Space: Codable {
     var name: String = ""
     var occupancy: Int = 0
     var capacity: Int = 0
-    var eating: Bool = false
-    var quiet: Bool = false
+    var tags: [String] = []
 }

@@ -6,9 +6,15 @@
 //
 
 import UIKit
+import TagListView
 
 class SearchViewController: UIViewController {
+    
+    var tags: [String] = []
+    var resultsVC: ResultsViewController!
 
+    @IBOutlet weak var searchTagsView: TagListView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,14 +22,28 @@ class SearchViewController: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        let destination = segue.destination
+        if let filterVC = destination as? FilterViewController {
+            filterVC.searchDelegate = self
+        }
+        if let resultsVC = destination as? ResultsViewController {
+            self.resultsVC = resultsVC
+            resultsVC.searchVC = self
+        }
+        if let spaceVC = destination as? SpaceViewController {
+            let buildingSpace = sender as! (Building, Space)
+            spaceVC.building = buildingSpace.0 // set building
+            spaceVC.space = buildingSpace.1 // set space
+        }
     }
-    */
-
+    
+    func updateFilters(tags: [String]) {
+        resultsVC.updateFilters(tags: self.tags)
+    }
 }

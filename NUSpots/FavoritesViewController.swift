@@ -8,21 +8,22 @@
 import UIKit
 import CollapsibleTableSectionViewController
 
-class FavoritesViewController: CollapsibleTableSectionViewController {
-    
-    var buildings: [Building] = DataSingleton.sharedInstance.buildings
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.delegate = self
+class FavoritesViewController: ListedSpacesViewController {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        // Do any additional setup after loading the view.
+        // Get the filtered favorites list
+        let buildings = DataSingleton.sharedInstance.buildings
+        let filteredBuildings = buildings.filter{ $0.spaces.contains{ favoriteSpaces.contains($0.s_id) } }
+        for b in filteredBuildings {
+            b.spaces = b.spaces.filter { favoriteSpaces.contains($0.s_id) }
+        }
+        self.buildings = filteredBuildings
+
+        self.tableView.reloadData() // reload table data
+        //self.buildings = DataSingleton.sharedInstance.buildings
     }
     
-
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
@@ -32,39 +33,6 @@ class FavoritesViewController: CollapsibleTableSectionViewController {
             spaceVC.building = buildingSpace.0 // set building
             spaceVC.space = buildingSpace.1 // set space
         }
-    }
-
-}
-
-extension FavoritesViewController: CollapsibleTableSectionDelegate {
-    
-    // Number of sections
-    func numberOfSections(_ tableView: UITableView) -> Int {
-        return buildings.count
-    }
-    
-    // Number of rows in a section
-    func collapsibleTableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return buildings[section].spaces.count
-    }
-    
-    // Returns a cell
-    func collapsibleTableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-      let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as UITableViewCell? ?? UITableViewCell(style: .default, reuseIdentifier: "Cell")
-        let space = buildings[indexPath.section].spaces[indexPath.row]
-
-        cell.textLabel?.text = space.name
-      return cell
-    }
-    
-    // Collapse by default
-    func shouldCollapseByDefault(_ tableView: UITableView) -> Bool {
-        return false
-    }
-    
-    // Title for each section
-    func collapsibleTableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return buildings[section].name
     }
     
     // Select a row

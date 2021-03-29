@@ -1,16 +1,20 @@
 PODS:
   - CollapsibleTableSectionViewController (2.0.1)
+  - TagListView (1.4.1)
 
 DEPENDENCIES:
   - CollapsibleTableSectionViewController (~> 2.0.1)
+  - TagListView (~> 1.0)
 
 SPEC REPOS:
   trunk:
     - CollapsibleTableSectionViewController
+    - TagListView
 
 SPEC CHECKSUMS:
   CollapsibleTableSectionViewController: 40d97d684d870044522a0dc29b128a6acaaa99df
+  TagListView: a1c236d17960a0cf64156725a76ce6d73ebce2be
 
-PODFILE CHECKSUM: cd841b9c66e8fa543d9dcab8c5a7b72dd80bb79c
+PODFILE CHECKSUM: da7a8c76d54737037ffc48bffcc705997930730a
 
 COCOAPODS: 1.10.1

@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		17A2960A61C7975216F2ED14 /* Pods_NUSpots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0A294EEF24B3DF56FF81A0 /* Pods_NUSpots.framework */; };
+		2564A8EC260D23F1008982AA /* SpaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2564A8EA260D23F1008982AA /* SpaceTableViewCell.swift */; };
+		2564A8ED260D23F1008982AA /* SpaceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2564A8EB260D23F1008982AA /* SpaceTableViewCell.xib */; };
+		2564A8F2260D4838008982AA /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2564A8F1260D4838008982AA /* FilterTableViewController.swift */; };
+		2564A8F7260D484F008982AA /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2564A8F6260D484F008982AA /* FilterViewController.swift */; };
+		2564A905260D4DAA008982AA /* CheckboxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2564A903260D4DAA008982AA /* CheckboxTableViewCell.swift */; };
+		2564A906260D4DAA008982AA /* CheckboxTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2564A904260D4DAA008982AA /* CheckboxTableViewCell.xib */; };
+		2564A90C260D85AB008982AA /* CounterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2564A90A260D85AB008982AA /* CounterTableViewCell.swift */; };
+		2564A90D260D85AB008982AA /* CounterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2564A90B260D85AB008982AA /* CounterTableViewCell.xib */; };
+		2564A912260D91C3008982AA /* Clearable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2564A911260D91C3008982AA /* Clearable.swift */; };
+		2564A927260E1B90008982AA /* ListedSpacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2564A926260E1B90008982AA /* ListedSpacesViewController.swift */; };
+		2564A92C260E1CCD008982AA /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2564A92B260E1CCD008982AA /* ResultsViewController.swift */; };
 		258D1CA5260A8B3F00C5D2C8 /* SpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258D1CA4260A8B3F00C5D2C8 /* SpaceViewController.swift */; };
 		258D1CAA260BD13600C5D2C8 /* BuildingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258D1CA9260BD13600C5D2C8 /* BuildingList.swift */; };
 		258D1CAF260BE9B100C5D2C8 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 258D1CAE260BE9B100C5D2C8 /* data.json */; };
@@ -50,6 +61,17 @@
 
 /* Begin PBXFileReference section */
 		184F90D7F14F05567343DCEA /* Pods-NUSpots-NUSpotsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NUSpots-NUSpotsUITests.release.xcconfig"; path = "Target Support Files/Pods-NUSpots-NUSpotsUITests/Pods-NUSpots-NUSpotsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2564A8EA260D23F1008982AA /* SpaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceTableViewCell.swift; sourceTree = "<group>"; };
+		2564A8EB260D23F1008982AA /* SpaceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpaceTableViewCell.xib; sourceTree = "<group>"; };
+		2564A8F1260D4838008982AA /* FilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewController.swift; sourceTree = "<group>"; };
+		2564A8F6260D484F008982AA /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		2564A903260D4DAA008982AA /* CheckboxTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxTableViewCell.swift; sourceTree = "<group>"; };
+		2564A904260D4DAA008982AA /* CheckboxTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckboxTableViewCell.xib; sourceTree = "<group>"; };
+		2564A90A260D85AB008982AA /* CounterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterTableViewCell.swift; sourceTree = "<group>"; };
+		2564A90B260D85AB008982AA /* CounterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CounterTableViewCell.xib; sourceTree = "<group>"; };
+		2564A911260D91C3008982AA /* Clearable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clearable.swift; sourceTree = "<group>"; };
+		2564A926260E1B90008982AA /* ListedSpacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListedSpacesViewController.swift; sourceTree = "<group>"; };
+		2564A92B260E1CCD008982AA /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		258D1CA4260A8B3F00C5D2C8 /* SpaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceViewController.swift; sourceTree = "<group>"; };
 		258D1CA9260BD13600C5D2C8 /* BuildingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingList.swift; sourceTree = "<group>"; };
 		258D1CAE260BE9B100C5D2C8 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
@@ -145,10 +167,21 @@
 				25AF94B82608247E009B3C48 /* SceneDelegate.swift */,
 				25AF94BA2608247E009B3C48 /* ViewController.swift */,
 				25AF94BC2608247E009B3C48 /* Main.storyboard */,
+				2564A92B260E1CCD008982AA /* ResultsViewController.swift */,
+				2564A903260D4DAA008982AA /* CheckboxTableViewCell.swift */,
+				2564A90A260D85AB008982AA /* CounterTableViewCell.swift */,
+				2564A911260D91C3008982AA /* Clearable.swift */,
+				2564A90B260D85AB008982AA /* CounterTableViewCell.xib */,
+				2564A904260D4DAA008982AA /* CheckboxTableViewCell.xib */,
+				2564A8F1260D4838008982AA /* FilterTableViewController.swift */,
+				2564A8F6260D484F008982AA /* FilterViewController.swift */,
+				2564A8EA260D23F1008982AA /* SpaceTableViewCell.swift */,
+				2564A8EB260D23F1008982AA /* SpaceTableViewCell.xib */,
 				258D1CA4260A8B3F00C5D2C8 /* SpaceViewController.swift */,
 				25AF95002608375A009B3C48 /* SearchViewController.swift */,
 				25AF94F82608354C009B3C48 /* SettingsViewController.swift */,
 				25AF94EE260834D9009B3C48 /* FavoritesViewController.swift */,
+				2564A926260E1B90008982AA /* ListedSpacesViewController.swift */,
 				25AF94E92608321A009B3C48 /* MapViewController.swift */,
 				25AF94BF2608247E009B3C48 /* Assets.xcassets */,
 				25AF94C12608247E009B3C48 /* LaunchScreen.storyboard */,
@@ -320,7 +353,10 @@
 				25AF94C32608247E009B3C48 /* LaunchScreen.storyboard in Resources */,
 				25AF94C02608247E009B3C48 /* Assets.xcassets in Resources */,
 				25AF94BE2608247E009B3C48 /* Main.storyboard in Resources */,
+				2564A90D260D85AB008982AA /* CounterTableViewCell.xib in Resources */,
 				258D1CAF260BE9B100C5D2C8 /* data.json in Resources */,
+				2564A906260D4DAA008982AA /* CheckboxTableViewCell.xib in Resources */,
+				2564A8ED260D23F1008982AA /* SpaceTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,16 +486,24 @@
 			files = (
 				25AF94BB2608247E009B3C48 /* ViewController.swift in Sources */,
 				25AF95012608375A009B3C48 /* SearchViewController.swift in Sources */,
+				2564A92C260E1CCD008982AA /* ResultsViewController.swift in Sources */,
 				25AF94F92608354C009B3C48 /* SettingsViewController.swift in Sources */,
 				258D1CA5260A8B3F00C5D2C8 /* SpaceViewController.swift in Sources */,
 				258D1CAA260BD13600C5D2C8 /* BuildingList.swift in Sources */,
 				25AF94B72608247E009B3C48 /* AppDelegate.swift in Sources */,
 				25AF94B92608247E009B3C48 /* SceneDelegate.swift in Sources */,
+				2564A905260D4DAA008982AA /* CheckboxTableViewCell.swift in Sources */,
+				2564A927260E1B90008982AA /* ListedSpacesViewController.swift in Sources */,
 				25AF951E2608E1A3009B3C48 /* Hours.swift in Sources */,
 				25AF94EF260834D9009B3C48 /* FavoritesViewController.swift in Sources */,
 				25AF94EA2608321A009B3C48 /* MapViewController.swift in Sources */,
+				2564A8F7260D484F008982AA /* FilterViewController.swift in Sources */,
+				2564A8EC260D23F1008982AA /* SpaceTableViewCell.swift in Sources */,
 				25AF9511260855F4009B3C48 /* Building.swift in Sources */,
+				2564A912260D91C3008982AA /* Clearable.swift in Sources */,
+				2564A90C260D85AB008982AA /* CounterTableViewCell.swift in Sources */,
 				25AF95262608E6EC009B3C48 /* DataSingleton.swift in Sources */,
+				2564A8F2260D4838008982AA /* FilterTableViewController.swift in Sources */,
 				25AF951926085768009B3C48 /* Space.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

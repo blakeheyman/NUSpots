@@ -41,16 +41,18 @@
           "name": "First Floor",
           "occupancy": 10,
           "capacity": 100,
-          "eating": true,
-          "quiet": false
+          "tags": [
+            "food allowed"
+          ]
         },
         {
           "s_id": "CSC|2",
           "name": "Second Floor",
           "occupancy": 10,
           "capacity": 100,
-          "eating": false,
-          "quiet": true
+          "tags": [
+            "food allowed"
+          ],
         }
       ]
     },
@@ -95,24 +97,30 @@
           "name": "Room 120",
           "occupancy": 0,
           "capacity": 10,
-          "eating": false,
-          "quiet": false
+          "tags": [
+            "classroom",
+            "quiet spot"
+          ]
         },
         {
           "s_id": "RY|2|202",
           "name": "Room 202",
           "occupancy": 1,
           "capacity": 10,
-          "eating": false,
-          "quiet": false
+          "tags": [
+            "classroom",
+            "quiet spot"
+          ]
         },
         {
           "s_id": "RY|3|316",
           "name": "Room 316",
           "occupancy": 8,
           "capacity": 8,
-          "eating": false,
-          "quiet": false
+          "tags": [
+            "classroom",
+            "quiet spot"
+          ]
         }
       ]
     }

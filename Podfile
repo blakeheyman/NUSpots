@@ -7,6 +7,7 @@ target 'NUSpots' do
 
   # Pods for NUSpots
   pod 'CollapsibleTableSectionViewController', '~> 2.0.1'
+  pod 'TagListView', '~> 1.0'
 
   target 'NUSpotsTests' do
     inherit! :search_paths

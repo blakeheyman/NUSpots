@@ -7,6 +7,7 @@
 
 import UIKit
 import MapKit
+import TagListView
 
 class SpaceViewController: UIViewController {
     
@@ -15,12 +16,8 @@ class SpaceViewController: UIViewController {
     @IBOutlet weak var capacityLabel: UILabel!
     @IBOutlet weak var hoursLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
-    @IBOutlet weak var classroomTagView: UIView!
-    @IBOutlet weak var eatingTagView: UIView!
-    @IBOutlet weak var eatingWidthConstraint: NSLayoutConstraint!
-    @IBOutlet weak var eatingLeadingConstraint: NSLayoutConstraint!
-    @IBOutlet weak var quietTagView: UIView!
     @IBOutlet weak var mapButton: UIButton!
+    @IBOutlet weak var spaceTagView: TagListView!
     
     var building: Building!
     var space: Space!
@@ -31,21 +28,16 @@ class SpaceViewController: UIViewController {
         self.buildingLabel.text = building.name // building name
         self.spaceLabel.text = space.name.uppercased() // space name
         self.capacityLabel.text = "\(space.occupancy)/\(space.capacity)" // capacity
-        for v: UIView in [classroomTagView, eatingTagView, quietTagView, mapButton] {
-            roundCorner(view: v)
-        }
+        roundCorner(view: self.mapButton)
         
+        spaceTagView.textFont = .systemFont(ofSize: 16)
+        spaceTagView.addTags(space.tags.map({$0.capitalized}))
         
         // TODO hours
         
         // TODO distance
         
         // TODO Tags
-        eatingTagView.isHidden = !space.eating
-        eatingWidthConstraint.constant = space.eating ? 96 : 0
-        eatingLeadingConstraint.constant = space.eating ? 10 : 0
-        
-        quietTagView.isHidden = !space.quiet
         
         // Do any additional setup after loading the view.
     }
