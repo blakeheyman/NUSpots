@@ -1,333 +1,418 @@
 {
-    "buildings": [{
-        "b_id": "BTNT",
-        "name": "Bamboo Tent",
-        "latitude": 42.339579,
-        "longitude": -71.086733,
-        "hours": [{
-            "open": "08:00",
-            "close": "22:30"
-        },
+    "buildings": [
         {
-            "open": "08:00",
-            "close": "22:30"
-        },
-        {
-            "open": "08:00",
-            "close": "22:30"
-        },
-        {
-            "open": "08:00",
-            "close": "22:30"
-        },
-        {
-            "open": "08:00",
-            "close": "22:30"
-        },
-        {
-            "open": "08:00",
-            "close": "22:30"
-        },
-        {
-            "open": "08:00",
-            "close": "22:30"
-        }
-        ],
-        "spaces": [{
-            "s_id": "BTNT|1",
+            "b_id": "BTNT",
             "name": "Bamboo Tent",
-            "occupancy": 0,
-            "capacity": 17,
-            "tags": [
-                "tent",
-                "common area",
-                "food allowed",
-                "good for groups"
-            ]
-        }]
-    },
-    {
-        "b_id": "BK",
-        "name": "Behrakis Health Sciences Center",
-        "latitude": 42.336969,
-        "longitude": -71.091551,
-        "hours": [{
-            "open": "07:00",
-            "close": "23:00"
-        },
-        {
-            "open": "07:00",
-            "close": "23:00"
-        },
-        {
-            "open": "07:00",
-            "close": "23:00"
-        },
-        {
-            "open": "07:00",
-            "close": "23:00"
-        },
-        {
-            "open": "07:00",
-            "close": "23:00"
-        },
-        {
-            "open": "07:00",
-            "close": "23:00"
-        },
-        {
-            "open": "07:00",
-            "close": "23:00"
-        }
-        ],
-        "spaces": [{
-            "s_id": "BK|0|029",
-            "name": "Room 029",
-            "occupancy": 1,
-            "capacity": 1,
-            "tags": [
-                "quiet spot"
+            "latitude": 42.339579,
+            "longitude": -71.086733,
+            "hours": [{
+                "open": "08:00",
+                "close": "22:30"
+            },
+            {
+                "open": "08:00",
+                "close": "22:30"
+            },
+            {
+                "open": "08:00",
+                "close": "22:30"
+            },
+            {
+                "open": "08:00",
+                "close": "22:30"
+            },
+            {
+                "open": "08:00",
+                "close": "22:30"
+            },
+            {
+                "open": "08:00",
+                "close": "22:30"
+            },
+            {
+                "open": "08:00",
+                "close": "22:30"
+            }
+            ],
+            "spaces": [
+                {
+                    "s_id": "BTNT|1",
+                    "name": "Bamboo Tent",
+                    "occupancy": 0,
+                    "capacity": 17,
+                    "tags": [
+                        "tent",
+                        "common area",
+                        "food allowed",
+                        "good for groups"
+                    ]
+                }
             ]
         },
         {
-            "s_id": "BK|3|305",
-            "name": "Room 305",
-            "occupancy": 0,
-            "capacity": 1,
-            "tags": [
-                "quiet spot",
-                "private space"
-            ]
-        }
-        ]
-    },
-    {
-        "b_id": "CSC",
-        "name": "Curry Student Center",
-        "latitude": 42.338979,
-        "longitude": -71.087465,
-        "hours": [{
-            "open": "07:00",
-            "close": "00:00"
-        },
-        {
-            "open": "07:00",
-            "close": "00:00"
-        },
-        {
-            "open": "07:00",
-            "close": "00:00"
-        },
-        {
-            "open": "07:00",
-            "close": "00:00"
-        },
-        {
-            "open": "07:00",
-            "close": "00:00"
-        },
-        {
-            "open": "07:00",
-            "close": "00:00"
-        },
-        {
-            "open": "07:00",
-            "close": "00:00"
-        }
-        ],
-        "spaces": [{
-            "s_id": "CSC|1",
-            "name": "First Floor",
-            "occupancy": 10,
-            "capacity": 100,
-            "tags": [
-                "food allowed",
-                "common area",
-                "good for groups"
+            "b_id": "BK",
+            "name": "Behrakis Health Sciences Center",
+            "latitude": 42.336969,
+            "longitude": -71.091551,
+            "hours": [{
+                "open": "07:00",
+                "close": "23:00"
+            },
+            {
+                "open": "07:00",
+                "close": "23:00"
+            },
+            {
+                "open": "07:00",
+                "close": "23:00"
+            },
+            {
+                "open": "07:00",
+                "close": "23:00"
+            },
+            {
+                "open": "07:00",
+                "close": "23:00"
+            },
+            {
+                "open": "07:00",
+                "close": "23:00"
+            },
+            {
+                "open": "07:00",
+                "close": "23:00"
+            }
+            ],
+            "spaces": [{
+                "s_id": "BK|0|029",
+                "name": "Room 029",
+                "occupancy": 1,
+                "capacity": 1,
+                "tags": [
+                    "quiet spot"
+                ]
+            },
+            {
+                "s_id": "BK|3|305",
+                "name": "Room 305",
+                "occupancy": 0,
+                "capacity": 1,
+                "tags": [
+                    "quiet spot",
+                    "private space"
+                ]
+            }
             ]
         },
         {
-            "s_id": "CSC|2",
-            "name": "Second Floor",
-            "occupancy": 10,
-            "capacity": 100,
-            "tags": [
-                "food allowed",
-                "common area",
-                "good for groups"
+            "b_id": "CSC",
+            "name": "Curry Student Center",
+            "latitude": 42.338979,
+            "longitude": -71.087465,
+            "hours": [{
+                "open": "07:00",
+                "close": "00:00"
+            },
+            {
+                "open": "07:00",
+                "close": "00:00"
+            },
+            {
+                "open": "07:00",
+                "close": "00:00"
+            },
+            {
+                "open": "07:00",
+                "close": "00:00"
+            },
+            {
+                "open": "07:00",
+                "close": "23:00"
+            },
+            {
+                "open": "08:00",
+                "close": "23:00"
+            },
+            {
+                "open": "10:00",
+                "close": "00:00"
+            }
+            ],
+            "spaces": [{
+                "s_id": "CSC|1",
+                "name": "First Floor",
+                "occupancy": 10,
+                "capacity": 100,
+                "tags": [
+                    "food allowed",
+                    "common area",
+                    "good for groups"
+                ]
+            },
+            {
+                "s_id": "CSC|2",
+                "name": "Second Floor",
+                "occupancy": 10,
+                "capacity": 100,
+                "tags": [
+                    "food allowed",
+                    "common area",
+                    "good for groups"
+                ]
+            }
             ]
-        }
-        ]
-    },
-    {
-        "b_id": "LTNT",
-        "name": "Lodge Tent",
-        "latitude": 42.338107,
-        "longitude": -71.091697,
-        "hours": [{
-            "open": "08:00",
-            "close": "22:30"
         },
         {
-            "open": "08:00",
-            "close": "22:30"
-        },
-        {
-            "open": "08:00",
-            "close": "22:30"
-        },
-        {
-            "open": "08:00",
-            "close": "22:30"
-        },
-        {
-            "open": "08:00",
-            "close": "22:30"
-        },
-        {
-            "open": "08:00",
-            "close": "22:30"
-        },
-        {
-            "open": "08:00",
-            "close": "22:30"
-        }
-        ],
-        "spaces": [{
-            "s_id": "LTNT|1",
+            "b_id": "LTNT",
             "name": "Lodge Tent",
-            "occupancy": 2,
-            "capacity": 17,
-            "tags": [
-                "tent",
-                "common area",
-                "food allowed",
-                "good for groups"
-            ]
-        }]
-    },
-    {
-        "b_id": "RTNT",
-        "name": "Renaissance Tent",
-        "latitude": 42.340476,
-        "longitude": -71.089569,
-        "hours": [{
-            "open": "08:00",
-            "close": "22:30"
+            "latitude": 42.338107,
+            "longitude": -71.091697,
+            "hours": [{
+                "open": "08:00",
+                "close": "22:30"
+            },
+            {
+                "open": "08:00",
+                "close": "22:30"
+            },
+            {
+                "open": "08:00",
+                "close": "22:30"
+            },
+            {
+                "open": "08:00",
+                "close": "22:30"
+            },
+            {
+                "open": "08:00",
+                "close": "22:30"
+            },
+            {
+                "open": "08:00",
+                "close": "22:30"
+            },
+            {
+                "open": "08:00",
+                "close": "22:30"
+            }
+            ],
+            "spaces": [{
+                "s_id": "LTNT|1",
+                "name": "Lodge Tent",
+                "occupancy": 2,
+                "capacity": 17,
+                "tags": [
+                    "tent",
+                    "common area",
+                    "food allowed",
+                    "good for groups"
+                ]
+            }]
         },
         {
-            "open": "08:00",
-            "close": "22:30"
-        },
-        {
-            "open": "08:00",
-            "close": "22:30"
-        },
-        {
-            "open": "08:00",
-            "close": "22:30"
-        },
-        {
-            "open": "08:00",
-            "close": "22:30"
-        },
-        {
-            "open": "08:00",
-            "close": "22:30"
-        },
-        {
-            "open": "08:00",
-            "close": "22:30"
-        }
-        ],
-        "spaces": [{
-            "s_id": "RTNT|1",
+            "b_id": "RTNT",
             "name": "Renaissance Tent",
-            "occupancy": 0,
-            "capacity": 17,
-            "tags": [
-                "tent",
-                "common area",
-                "food allowed",
-                "good for groups"
+            "latitude": 42.340476,
+            "longitude": -71.089569,
+            "hours": [{
+                "open": "08:00",
+                "close": "22:30"
+            },
+            {
+                "open": "08:00",
+                "close": "22:30"
+            },
+            {
+                "open": "08:00",
+                "close": "22:30"
+            },
+            {
+                "open": "08:00",
+                "close": "22:30"
+            },
+            {
+                "open": "08:00",
+                "close": "22:30"
+            },
+            {
+                "open": "08:00",
+                "close": "22:30"
+            },
+            {
+                "open": "08:00",
+                "close": "22:30"
+            }
+            ],
+            "spaces": [{
+                "s_id": "RTNT|1",
+                "name": "Renaissance Tent",
+                "occupancy": 0,
+                "capacity": 17,
+                "tags": [
+                    "tent",
+                    "common area",
+                    "food allowed",
+                    "good for groups"
+                ]
+            }]
+        },
+        {
+            "b_id": "RY",
+            "name": "Ryder Hall",
+            "latitude": 42.336582,
+            "longitude": -71.090671,
+            "hours": [{
+                "open": "08:00",
+                "close": "20:00"
+            },
+            {
+                "open": "08:00",
+                "close": "20:00"
+            },
+            {
+                "open": "08:00",
+                "close": "20:00"
+            },
+            {
+                "open": "08:00",
+                "close": "20:00"
+            },
+            {
+                "open": "08:00",
+                "close": "20:00"
+            },
+            {
+                "open": "08:00",
+                "close": "20:00"
+            },
+            {
+                "open": "08:00",
+                "close": "20:00"
+            }
+            ],
+            "spaces": [
+                {
+                    "s_id": "RY|1|120",
+                    "name": "Room 120",
+                    "occupancy": 0,
+                    "capacity": 10,
+                    "tags": [
+                        "classroom",
+                        "quiet spot"
+                    ]
+                },
+                {
+                    "s_id": "RY|1|124",
+                    "name": "Room 124",
+                    "occupancy": 0,
+                    "capacity": 10,
+                    "tags": [
+                        "classroom",
+                        "quiet spot"
+                    ]
+                },
+                {
+                    "s_id": "RY|2|202",
+                    "name": "Room 202",
+                    "occupancy": 1,
+                    "capacity": 10,
+                    "tags": [
+                        "classroom",
+                        "quiet spot"
+                    ]
+                },
+                {
+                    "s_id": "RY|3|316",
+                    "name": "Room 316",
+                    "occupancy": 8,
+                    "capacity": 8,
+                    "tags": [
+                        "classroom",
+                        "quiet spot"
+                    ]
+                }
             ]
-        }]
-    },
-    {
-        "b_id": "RY",
-        "name": "Ryder Hall",
-        "latitude": 42.336582,
-        "longitude": -71.090671,
-        "hours": [{
-            "open": "08:00",
-            "close": "20:00"
         },
         {
-            "open": "08:00",
-            "close": "20:00"
-        },
-        {
-            "open": "08:00",
-            "close": "20:00"
-        },
-        {
-            "open": "08:00",
-            "close": "20:00"
-        },
-        {
-            "open": "08:00",
-            "close": "20:00"
-        },
-        {
-            "open": "08:00",
-            "close": "20:00"
-        },
-        {
-            "open": "08:00",
-            "close": "20:00"
+            "b_id": "SL",
+            "name": "Snell Library",
+            "latitude": 42.338372,
+            "longitude": -71.087905,
+            "hours": [{
+                "open": "08:00",
+                "close": "00:00"
+            },
+            {
+                "open": "08:00",
+                "close": "00:00"
+            },
+            {
+                "open": "08:00",
+                "close": "00:00"
+            },
+            {
+                "open": "08:00",
+                "close": "00:00"
+            },
+            {
+                "open": "08:00",
+                "close": "22:00"
+            },
+            {
+                "open": "12:00",
+                "close": "22:00"
+            },
+            {
+                "open": "12:00",
+                "close": "00:00"
+            }
+            ],
+            "spaces": [
+                {
+                    "s_id": "SL|1",
+                    "name": "First Floor",
+                    "occupancy": 0,
+                    "capacity": 30,
+                    "tags": [
+                        "common area",
+                        "good for groups",
+                        "library space"
+                    ]
+                },
+                {
+                    "s_id": "SL|2",
+                    "name": "Second Floor",
+                    "occupancy": 0,
+                    "capacity": 30,
+                    "tags": [
+                        "common area",
+                        "good for groups",
+                        "library space"
+                    ]
+                },
+                {
+                    "s_id": "SL|3",
+                    "name": "Third Floor",
+                    "occupancy": 3,
+                    "capacity": 30,
+                    "tags": [
+                        "quiet spot",
+                        "library space"
+                    ]
+                },
+                {
+                    "s_id": "SL|4",
+                    "name": "Fourth Floor",
+                    "occupancy": 10,
+                    "capacity": 30,
+                    "tags": [
+                        "quiet spot",
+                        "library space",
+                        "private space",
+                        "food allowed"
+                    ]
+                }
+            ]
         }
-        ],
-        "spaces": [{
-            "s_id": "RY|1|120",
-            "name": "Room 120",
-            "occupancy": 0,
-            "capacity": 10,
-            "tags": [
-                "classroom",
-                "quiet spot"
-            ]
-        },
-        {
-            "s_id": "RY|1|124",
-            "name": "Room 124",
-            "occupancy": 0,
-            "capacity": 10,
-            "tags": [
-                "classroom",
-                "quiet spot"
-            ]
-        },
-        {
-            "s_id": "RY|2|202",
-            "name": "Room 202",
-            "occupancy": 1,
-            "capacity": 10,
-            "tags": [
-                "classroom",
-                "quiet spot"
-            ]
-        },
-        {
-            "s_id": "RY|3|316",
-            "name": "Room 316",
-            "occupancy": 8,
-            "capacity": 8,
-            "tags": [
-                "classroom",
-                "quiet spot"
-            ]
-        }
-        ]
-    }
     ]
 }
