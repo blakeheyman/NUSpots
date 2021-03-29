@@ -11,6 +11,7 @@ class SpaceTableViewCell: UITableViewCell {
     
     @IBOutlet weak var starButton: UIImageView!
     
+    var delegate: ListedSpacesViewController!
     var space: Space!
     
     override func awakeFromNib() {
@@ -31,9 +32,12 @@ class SpaceTableViewCell: UITableViewCell {
         
         if starButton.isHighlighted {
             DataSingleton.sharedInstance.addFavorite(s_id: space.s_id)
+            //delegate.favoriteSpaces.insert(space.s_id)
         }
         else {
             DataSingleton.sharedInstance.removeFavorite(s_id: space.s_id)
+            //delegate.favoriteSpaces.remove(space.s_id)
         }
+        delegate.tableView.reloadData()
     }
 }

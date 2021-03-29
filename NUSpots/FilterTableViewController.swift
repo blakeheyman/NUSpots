@@ -11,7 +11,6 @@ class FilterTableViewController: UITableViewController {
     
     var sections: [[String : Clearable]] = DataSingleton.sharedInstance.sections
     
-    
     override func viewDidLoad() {
         
         super.viewDidLoad()

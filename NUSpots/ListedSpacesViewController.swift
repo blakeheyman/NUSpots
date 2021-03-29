@@ -12,7 +12,6 @@ class ListedSpacesViewController: CollapsibleTableSectionViewController {
     
     weak var tableView: UITableView!
     var buildings: [Building] = []
-    var favoriteSpaces: Set<String> = DataSingleton.sharedInstance.favoriteSpaces
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,21 +21,22 @@ class ListedSpacesViewController: CollapsibleTableSectionViewController {
         
         self.tableView.register(UINib(nibName: "SpaceTableViewCell", bundle: nil), forCellReuseIdentifier: "space-cell")
         // Do any additional setup after loading the view.
+        
+        
+        // Get the filtered favorites list
+        let buildings = DataSingleton.sharedInstance.buildings
+        var filtered: [Building] = []
+        for b in buildings {
+            let f = b.filterSpaces(predicate: { $0.occupancy < $0.capacity })
+            if f != nil { filtered.append(f!) }
+        }
+        self.buildings = filtered
+        self.tableView.reloadData() // reload table data
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        // Get the filtered favorites list
-        let buildings = DataSingleton.sharedInstance.buildings
-        let filteredBuildings = buildings.filter{ $0.spaces.contains{ favoriteSpaces.contains($0.s_id) } }
-        for b in filteredBuildings {
-            b.spaces = b.spaces.filter { favoriteSpaces.contains($0.s_id) }
-        }
-        self.buildings = filteredBuildings
-
-        self.tableView.reloadData() // reload table data
-        //self.buildings = DataSingleton.sharedInstance.buildings
+        self.tableView.reloadData()
     }
 }
 
@@ -57,6 +57,8 @@ extension ListedSpacesViewController: CollapsibleTableSectionDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "space-cell") as! SpaceTableViewCell
         let space = buildings[indexPath.section].spaces[indexPath.row]
 
+        cell.delegate = self
+        cell.starButton.isHighlighted = DataSingleton.sharedInstance.favoriteSpaces.contains(space.s_id)
         cell.space = space
         cell.textLabel?.text = space.name
       return cell

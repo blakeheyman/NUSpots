@@ -14,14 +14,13 @@ class FavoritesViewController: ListedSpacesViewController {
         
         // Get the filtered favorites list
         let buildings = DataSingleton.sharedInstance.buildings
-        let filteredBuildings = buildings.filter{ $0.spaces.contains{ favoriteSpaces.contains($0.s_id) } }
-        for b in filteredBuildings {
-            b.spaces = b.spaces.filter { favoriteSpaces.contains($0.s_id) }
+        var filtered: [Building] = []
+        for b in buildings {
+            let f = b.filterSpaces(predicate: { DataSingleton.sharedInstance.favoriteSpaces.contains($0.s_id) })
+            if f != nil { filtered.append(f!) }
         }
-        self.buildings = filteredBuildings
-
+        self.buildings = filtered
         self.tableView.reloadData() // reload table data
-        //self.buildings = DataSingleton.sharedInstance.buildings
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

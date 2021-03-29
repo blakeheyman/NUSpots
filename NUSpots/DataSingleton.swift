@@ -40,11 +40,17 @@ class DataSingleton {
         favoriteSpaces.insert(s_id)
         UserDefaults.standard.setValue(Array(favoriteSpaces), forKey: "favoriteSpaces")
         UserDefaults.standard.synchronize()
+        
+        print("Favorite \(s_id) added")
+        print(favoriteSpaces)
     }
     
     func removeFavorite(s_id: String) {
         favoriteSpaces.remove(s_id)
         UserDefaults.standard.setValue(Array(favoriteSpaces), forKey: "favoriteSpaces")
         UserDefaults.standard.synchronize()
+        
+        print("Favorite \(s_id) removed")
+        print(favoriteSpaces)
     }
 }

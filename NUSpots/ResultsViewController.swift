@@ -34,14 +34,14 @@ class ResultsViewController: ListedSpacesViewController {
                                                                         && Int($0) ?? 1 < s.capacity - s.occupancy)
                                                                 }) }
         
+        // Get the filtered favorites list
         let buildings = DataSingleton.sharedInstance.buildings
-        let filteredBuildings = buildings.filter{ $0.spaces.contains{ tagMatch($0) } }
-        for b in filteredBuildings {
-            print(tags)
-            b.spaces = b.spaces.filter { tagMatch($0) }
+        var filtered: [Building] = []
+        for b in buildings {
+            let f = b.filterSpaces(predicate: tagMatch)
+            if f != nil { filtered.append(f!) }
         }
-        self.buildings = filteredBuildings
-
+        self.buildings = filtered
         self.tableView.reloadData() // reload table data
     }
     
