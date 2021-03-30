@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 class Building: Codable {
     var b_id: String = ""
@@ -14,6 +15,21 @@ class Building: Codable {
     var longitude: Double = 0.0
     var hours: [Hours] = []
     var spaces: [Space] = []
+    
+    var distance: Double {
+        let lm = CLLocationManager()
+        lm.requestWhenInUseAuthorization()
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            let loc = lm.location
+            let buildingLocation = CLLocation(
+                latitude:  self.latitude,
+                longitude: self.longitude
+            )
+            let distance = loc?.distance(from: buildingLocation)
+            return distance ?? -1
+        }
+        return -1
+    }
     
     func filterSpaces(predicate: (Space) -> Bool) -> Building? {
         let copy = Building()

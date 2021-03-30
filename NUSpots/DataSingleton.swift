@@ -22,7 +22,15 @@ class DataSingleton {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                 let decoder = JSONDecoder()
                 let buildingList = try! decoder.decode(BuildingList.self, from: data)
-                self.buildings = buildingList.buildings
+                
+                var available: [Building] = []
+                for b in buildingList.buildings {
+                    let cur = b.filterSpaces(predicate: {$0.occupancy < $0.capacity})
+                    if cur != nil {
+                        available.append(cur!)
+                    }
+                }
+                self.buildings = available
             } catch {
                 // handle error
             }

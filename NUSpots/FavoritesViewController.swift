@@ -9,18 +9,26 @@ import UIKit
 import CollapsibleTableSectionViewController
 
 class FavoritesViewController: ListedSpacesViewController {
+    
+    var sort = { (b1: Building, b2: Building) in b1.name.lowercased() < b2.name.lowercased() }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         // Get the filtered favorites list
+        self.buildings = filterBuildings()
+        self.buildings.sort(by: sort)
+        self.tableView.reloadData() // reload table data
+    }
+    
+    override func filterBuildings() -> [Building] {
         let buildings = DataSingleton.sharedInstance.buildings
         var filtered: [Building] = []
         for b in buildings {
             let f = b.filterSpaces(predicate: { DataSingleton.sharedInstance.favoriteSpaces.contains($0.s_id) })
             if f != nil { filtered.append(f!) }
         }
-        self.buildings = filtered
-        self.tableView.reloadData() // reload table data
+        return filtered
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -39,5 +47,29 @@ class FavoritesViewController: ListedSpacesViewController {
         let space = buildings[indexPath.section].spaces[indexPath.row] // Space that was selected
         let building = buildings[indexPath.section]
         performSegue(withIdentifier: "fave-to-space", sender: (building, space))
+    }
+    
+    @IBAction func sortTapped(_ sender: UIBarButtonItem) {
+        let alert = UIAlertController(title: "Sort favorites by", message: nil, preferredStyle: .actionSheet)
+        
+        alert.addAction(UIAlertAction(title: "A-Z", style: .default, handler: { (_) in
+            let azSort = { (b1: Building, b2: Building) in b1.name.lowercased() < b2.name.lowercased() }
+            self.buildings.sort(by: azSort)
+            self.sort = azSort
+            self.tableView.reloadData()
+        }))
+
+        alert.addAction(UIAlertAction(title: "Distance", style: .default, handler: { (_) in
+            let distanceSort = { (b1: Building, b2: Building) in b1.distance < b2.distance }
+            self.buildings.sort(by: distanceSort)
+            self.sort = distanceSort
+            self.tableView.reloadData()
+        }))
+
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (_) in
+            print("User click Dismiss button")
+        }))
+
+        self.present(alert, animated: true, completion: nil)
     }
 }

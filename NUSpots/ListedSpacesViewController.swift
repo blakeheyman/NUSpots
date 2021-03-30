@@ -22,7 +22,16 @@ class ListedSpacesViewController: CollapsibleTableSectionViewController {
         self.tableView.register(UINib(nibName: "SpaceTableViewCell", bundle: nil), forCellReuseIdentifier: "space-cell")
         // Do any additional setup after loading the view.
         
-        
+        self.buildings = filterBuildings()
+        self.tableView.reloadData() // reload table data
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableView.reloadData()
+    }
+    
+    func filterBuildings() -> [Building] {
         // Get the filtered favorites list
         let buildings = DataSingleton.sharedInstance.buildings
         var filtered: [Building] = []
@@ -30,13 +39,7 @@ class ListedSpacesViewController: CollapsibleTableSectionViewController {
             let f = b.filterSpaces(predicate: { $0.occupancy < $0.capacity })
             if f != nil { filtered.append(f!) }
         }
-        self.buildings = filtered
-        self.tableView.reloadData() // reload table data
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.tableView.reloadData()
+        return filtered
     }
 }
 

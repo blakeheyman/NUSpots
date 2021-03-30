@@ -8,17 +8,22 @@
 import UIKit
 import TagListView
 
-class SearchViewController: UIViewController {
+class SearchViewController: UIViewController, UISearchBarDelegate {
     
-    var tags: [String] = []
+    var tags: [String] = ["1 seat available"]
+    var query: String = ""
     var resultsVC: ResultsViewController!
-
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var searchTagsView: TagListView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        searchBar.delegate = self
+        self.searchBar.text = query
+        self.searchTagsView.removeAllTags()
+        self.searchTagsView.addTags(tags)
+        updateFilters(query: query, tags: tags)
     }
     
 
@@ -43,7 +48,31 @@ class SearchViewController: UIViewController {
         }
     }
     
-    func updateFilters(tags: [String]) {
-        resultsVC.updateFilters(tags: self.tags)
+    func updateFilters(query: String, tags: [String]) {
+        resultsVC.updateFilters(query: query, tags: self.tags)
     }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.query = searchText
+        self.updateFilters(query: searchText, tags: tags)
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = true
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.endEditing(true)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+            searchBar.text = nil
+            searchBar.showsCancelButton = false
+
+            // Remove focus from the search bar.
+            searchBar.endEditing(true)
+
+            // Perform any necessary work.  E.g., repopulating a table view
+            // if the search bar performs filtering.
+        }
 }

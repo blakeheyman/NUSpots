@@ -70,7 +70,7 @@ class FilterViewController: UIViewController {
         searchDelegate.searchTagsView.addTags(tags)
         searchDelegate.tags = tags
         DataSingleton.sharedInstance.sections = filterTVC.sections
-        self.searchDelegate.updateFilters(tags: tags)
+        self.searchDelegate.updateFilters(query: searchDelegate.query, tags: tags)
         self.dismiss(animated: true, completion: nil)
     }
     
