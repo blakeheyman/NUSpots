@@ -17,9 +17,8 @@ class Building: Codable {
     var spaces: [Space] = []
     
     var distance: Double {
-        let lm = CLLocationManager()
-        lm.requestWhenInUseAuthorization()
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            let lm = CLLocationManager()
             let loc = lm.location
             let buildingLocation = CLLocation(
                 latitude:  self.latitude,

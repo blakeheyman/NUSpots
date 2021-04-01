@@ -40,7 +40,7 @@ class ResultsViewController: ListedSpacesViewController {
             let f = b.filterSpaces(predicate:
                                     { (s: Space) -> Bool in (b.name.starts(with: query) || s.name.starts(with: query)) && tags.allSatisfy({ s.tags.contains($0.lowercased())
                                         || ($0 == tags.last
-                                                && Int($0.prefix(1))! <= s.capacity - s.occupancy)
+                                                && Int($0.prefix(1)) ?? 1 <= s.capacity - s.occupancy)
                                     }) })
             if f != nil { filtered.append(f!) }
         }

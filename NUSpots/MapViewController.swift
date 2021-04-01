@@ -11,7 +11,7 @@ import MapKit
 
 class MapViewController: UIViewController {
     
-    var locationManager = CLLocationManager()
+    let locationManager = CLLocationManager()
     let buildings = DataSingleton.sharedInstance.buildings
 
     @IBOutlet weak var mapView: MKMapView!
@@ -22,20 +22,16 @@ class MapViewController: UIViewController {
     @IBOutlet weak var classroomImageView: UIImageView!
     @IBOutlet weak var quietImageView: UIImageView!
     
+    var recommendedVC: MapRecommendedViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.mapView.delegate = self
         self.mapSearchBar.delegate = self
 
-        let locationManager = CLLocationManager()
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-
-        // Check for Location Services
-        if (CLLocationManager.locationServicesEnabled()) {
-            locationManager.requestAlwaysAuthorization()
-            locationManager.requestWhenInUseAuthorization()
-        }
+        self.locationManager.delegate = self
+        self.locationManager.requestWhenInUseAuthorization()
 
         //Zoom to user location
         if let userLocation = locationManager.location?.coordinate {
@@ -45,7 +41,7 @@ class MapViewController: UIViewController {
         }
         
         else {
-            let viewRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 42.3398, longitude: 71.0892), latitudinalMeters: 300, longitudinalMeters: 300)
+            let viewRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 42.3395, longitude: -71.0894), latitudinalMeters: 400, longitudinalMeters: 400)
             mapView.setRegion(viewRegion, animated: false)
         }
         
@@ -56,7 +52,6 @@ class MapViewController: UIViewController {
             mapView.addAnnotation(annotation)
         }
         
-        self.locationManager = locationManager
         
         let ivs = [foodImageView, groupsImageView, classroomImageView, quietImageView]
         for n in 0 ..< ivs.count {
@@ -98,6 +93,7 @@ class MapViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let recommendedVC = segue.destination as? MapRecommendedViewController {
             recommendedVC.mapVC = self
+            self.recommendedVC = recommendedVC
         }
         
         if let spaceVC = segue.destination as? SpaceViewController {
@@ -142,6 +138,18 @@ extension MapViewController: UISearchBarDelegate {
         }
         searchBar.endEditing(true)
     }
-    
-    
+}
+
+extension MapViewController: CLLocationManagerDelegate {
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse
+            || CLLocationManager.authorizationStatus() == .authorizedAlways {
+            if let userLocation = locationManager.location?.coordinate {
+                let viewRegion = MKCoordinateRegion(center: userLocation, latitudinalMeters: 200, longitudinalMeters: 200)
+                mapView.setRegion(viewRegion, animated: false)
+                mapView.showsUserLocation = true
+                recommendedVC?.resort()
+            }
+        }
+    }
 }

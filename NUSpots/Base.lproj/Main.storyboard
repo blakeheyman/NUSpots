@@ -32,8 +32,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3FZ-Iu-o1G">
                                 <rect key="frame" x="207" y="170" width="103.5" height="83"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1Xs-F0-EAE">
-                                        <rect key="frame" x="27" y="1" width="50" height="48"/>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Map-Classroom-Light" translatesAutoresizingMaskIntoConstraints="NO" id="1Xs-F0-EAE">
+                                        <rect key="frame" x="27" y="0.0" width="50" height="50"/>
                                         <color key="tintColor" name="NU Red"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="OwZ-Jl-7AN"/>
@@ -58,8 +58,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d9c-rP-5yE">
                                 <rect key="frame" x="103.5" y="170" width="103.5" height="83"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.3.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ZGW-Md-hzp">
-                                        <rect key="frame" x="27" y="1.5" width="50" height="47"/>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Map-GoodForGroups-Light" translatesAutoresizingMaskIntoConstraints="NO" id="ZGW-Md-hzp">
+                                        <rect key="frame" x="27" y="0.0" width="50" height="50"/>
                                         <color key="tintColor" name="NU Red"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="CGy-HE-L7h"/>
@@ -84,8 +84,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3uh-Bs-jJp">
                                 <rect key="frame" x="0.0" y="170" width="103.5" height="83"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mouth.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="2RT-bL-SQt">
-                                        <rect key="frame" x="27" y="3.5" width="50" height="43"/>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Map-FoodAllowed-Light" translatesAutoresizingMaskIntoConstraints="NO" id="2RT-bL-SQt">
+                                        <rect key="frame" x="27" y="0.0" width="50" height="50"/>
                                         <color key="tintColor" name="NU Red"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="517-En-Rei"/>
@@ -126,8 +126,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EP9-9M-CWr">
                                 <rect key="frame" x="310.5" y="170" width="103.5" height="83"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="volume.slash.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="f2T-hc-tm8">
-                                        <rect key="frame" x="27" y="1.5" width="50" height="48"/>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Map-QuietSpot-Light" translatesAutoresizingMaskIntoConstraints="NO" id="f2T-hc-tm8">
+                                        <rect key="frame" x="27" y="0.0" width="50" height="50"/>
                                         <color key="tintColor" name="NU Red"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="UwS-bg-WJd"/>
@@ -392,7 +392,7 @@
                             <constraint firstItem="An1-TY-OgB" firstAttribute="trailing" secondItem="ppd-eG-jar" secondAttribute="trailing" constant="20" id="pFy-iq-AYv"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="gearshape.fill" catalog="system" id="ocO-k4-Gqp"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="Global-Settings-Selected-Light" id="ocO-k4-Gqp"/>
                     <connections>
                         <outlet property="advancedSettings" destination="ppd-eG-jar" id="Mlh-gn-owA"/>
                     </connections>
@@ -455,7 +455,7 @@
                                         <size key="value" width="0.0" height="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="tagBackgroundColor">
-                                        <color key="value" name="NU Red"/>
+                                        <color key="value" name="NU Turquoise"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -480,7 +480,8 @@
                                     <constraint firstAttribute="height" constant="24" id="aAt-C1-kc0"/>
                                     <constraint firstAttribute="width" constant="100" id="iZl-Wn-5gM"/>
                                 </constraints>
-                                <state key="normal" title="Add Filter" image="plus" catalog="system">
+                                <color key="tintColor" name="NU Red"/>
+                                <state key="normal" title=" Add Filter" image="plus" catalog="system">
                                     <color key="titleColor" name="NU Dark Text"/>
                                 </state>
                                 <connections>
@@ -736,7 +737,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" name="NU Red"/>
+                                <color key="backgroundColor" name="NU Turquoise"/>
                                 <constraints>
                                     <constraint firstItem="Tfe-7t-Udp" firstAttribute="centerY" secondItem="ndl-7k-tWy" secondAttribute="centerY" id="fV7-Be-dTe"/>
                                     <constraint firstItem="Tfe-7t-Udp" firstAttribute="centerX" secondItem="ndl-7k-tWy" secondAttribute="centerX" id="tp6-rr-XUU"/>
@@ -774,15 +775,12 @@
                                 <rect key="frame" x="30" y="463.5" width="354" height="24"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="tagBackgroundColor">
-                                        <color key="value" name="NU Red"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="enableRemoveButton" value="NO"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="14"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.0"/>
+                                        <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="removeIconLineWidth">
                                         <real key="value" value="0.0"/>
@@ -799,10 +797,19 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="marginY">
                                         <real key="value" value="8"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="NU Turquoise"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="tagBackgroundColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" name="NU Turquoise"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" highlightedImage="star.fill" translatesAutoresizingMaskIntoConstraints="NO" id="4T4-MZ-QiS">
-                                <rect key="frame" x="344" y="100.5" width="30" height="30"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Global-FavoritesStar-Unselected-Light" highlightedImage="Global-Favorites-Selected-Light" translatesAutoresizingMaskIntoConstraints="NO" id="4T4-MZ-QiS">
+                                <rect key="frame" x="344" y="101" width="30" height="30"/>
                                 <color key="tintColor" name="NU Red"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="ADP-XD-Fqb"/>
@@ -920,11 +927,11 @@
             </objects>
             <point key="canvasLocation" x="10" y="144"/>
         </scene>
-        <!--Favorites-->
+        <!--Navigation Controller-->
         <scene sceneID="M4D-Fy-fWC">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yep-wN-d3v" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favorites" image="star.fill" catalog="system" id="y42-ml-su2"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="y42-ml-su2"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="A8w-RK-c2x">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -946,6 +953,7 @@
                     <view key="view" contentMode="scaleToFill" id="afd-OC-6FX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="233"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Zs9-j5-Cqp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
@@ -981,15 +989,16 @@
             </objects>
             <point key="canvasLocation" x="4834.7826086956529" y="-435.26785714285711"/>
         </scene>
-        <!--Search-->
+        <!--Navigation Controller-->
         <scene sceneID="H1A-xs-C0r">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lFR-Ns-zVT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="Kb6-Tp-nSS"/>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="Kb6-Tp-nSS"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tAa-p3-Lce">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="NU Red"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1004,7 +1013,7 @@
         <scene sceneID="pRC-J5-d3R">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tpl-uV-Mv1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Map" image="map.fill" catalog="system" id="vmW-hO-rUd"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="Global-Map-Selected-Light" id="vmW-hO-rUd"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BfS-j9-335">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -1030,22 +1039,21 @@
     </designables>
     <inferredMetricsTieBreakers>
         <segue reference="f1L-iE-m3N"/>
-        <segue reference="CGS-o8-Gvb"/>
+        <segue reference="34M-AZ-Md8"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="book.fill" catalog="system" width="128" height="102"/>
+        <image name="Global-Favorites-Selected-Light" width="29.5" height="29.5"/>
+        <image name="Global-FavoritesStar-Unselected-Light" width="25" height="24"/>
+        <image name="Global-Map-Selected-Light" width="24.5" height="25.5"/>
+        <image name="Global-Settings-Selected-Light" width="26" height="26"/>
+        <image name="Map-Classroom-Light" width="67" height="62"/>
+        <image name="Map-FoodAllowed-Light" width="80.5" height="69.5"/>
+        <image name="Map-GoodForGroups-Light" width="66" height="62"/>
+        <image name="Map-QuietSpot-Light" width="66.5" height="65"/>
         <image name="clock" catalog="system" width="128" height="121"/>
-        <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="location" catalog="system" width="128" height="121"/>
-        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
-        <image name="map.fill" catalog="system" width="128" height="110"/>
-        <image name="mouth.fill" catalog="system" width="128" height="67"/>
         <image name="person" catalog="system" width="128" height="117"/>
-        <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <image name="plus" catalog="system" width="128" height="113"/>
-        <image name="star" catalog="system" width="128" height="116"/>
-        <image name="star.fill" catalog="system" width="128" height="116"/>
-        <image name="volume.slash.fill" catalog="system" width="124" height="128"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="NU Dark Text">
             <color red="0.0080000003799796104" green="0.0080000003799796104" blue="0.0080000003799796104" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1055,6 +1063,9 @@
         </namedColor>
         <namedColor name="NU Red">
             <color red="0.79699999094009399" green="0.16699999570846558" blue="0.078000001609325409" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="NU Turquoise">
+            <color red="0.19499999284744263" green="0.77700001001358032" blue="0.71799999475479126" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

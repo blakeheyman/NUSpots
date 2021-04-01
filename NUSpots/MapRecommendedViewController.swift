@@ -14,7 +14,7 @@ class MapRecommendedViewController: ListedSpacesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.buildings.sort(by: { (b1: Building, b2: Building) in b1.distance < b2.distance })
+        resort()
     }
     
 //    override func viewWillAppear(_ animated: Bool) {
@@ -76,4 +76,9 @@ class MapRecommendedViewController: ListedSpacesViewController {
 //    override func shouldCollapseByDefault(_ tableView: UITableView) -> Bool {
 //        return true
 //    }
+    
+    func resort() {
+        self.buildings.sort(by: { (b1: Building, b2: Building) in b1.distance < b2.distance })
+        self.tableView.reloadData()
+    }
 }

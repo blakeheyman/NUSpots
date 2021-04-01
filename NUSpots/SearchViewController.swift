@@ -20,16 +20,17 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         searchBar.delegate = self
+        self.searchTagsView.delegate = self
         self.searchBar.text = query
         self.searchTagsView.removeAllTags()
         self.searchTagsView.addTags(tags)
         updateFilters(query: query, tags: tags)
     }
     
-
+    
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -66,13 +67,36 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-            searchBar.text = nil
-            searchBar.showsCancelButton = false
+        searchBar.text = nil
+        searchBar.showsCancelButton = false
+        
+        // Remove focus from the search bar.
+        searchBar.endEditing(true)
+        
+        // Perform any necessary work.  E.g., repopulating a table view
+        // if the search bar performs filtering.
+    }
+}
 
-            // Remove focus from the search bar.
-            searchBar.endEditing(true)
-
-            // Perform any necessary work.  E.g., repopulating a table view
-            // if the search bar performs filtering.
+extension SearchViewController: TagListViewDelegate {
+    func tagRemoveButtonPressed(_ title: String, tagView: TagView, sender: TagListView) {
+        sender.removeTag(title) // remove the tag
+        self.tags.removeAll(where: { $0.contains(title) })
+        
+        
+        let decimalCharacters = CharacterSet.decimalDigits
+        let decimalRange = title.rangeOfCharacter(from: decimalCharacters)
+        if decimalRange != nil { // Group size
+            DataSingleton.sharedInstance.sections[2]["Seats available"] = 1
         }
+
+        var sections = DataSingleton.sharedInstance.sections
+        for n in 0 ..< sections.count {
+            if sections[n][title] != nil {
+                DataSingleton.sharedInstance.sections[n][title] = sections[n][title]?.clear()
+            }
+        }
+        
+        updateFilters(query: self.query, tags: self.tags)
+    }
 }
