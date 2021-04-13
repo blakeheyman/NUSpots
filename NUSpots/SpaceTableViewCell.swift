@@ -17,6 +17,7 @@ class SpaceTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.indentationLevel = 2
         starButton.isHighlighted = true
         starButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.starPressed)))
     }

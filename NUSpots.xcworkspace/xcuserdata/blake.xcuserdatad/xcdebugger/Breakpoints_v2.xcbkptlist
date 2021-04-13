@@ -14,8 +14,8 @@
             filePath = "NUSpots/ListedSpacesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "collapsibleTableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "NUSpots/ListedSpacesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "collapsibleTableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -62,8 +62,8 @@
             filePath = "NUSpots/SpaceViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
             landmarkName = "getHours()"
             landmarkType = "7">
          </BreakpointContent>
@@ -71,55 +71,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A43070C7-16F4-4F0E-8FE5-8366337DA422"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "NUSpots/ResultsViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "updateFilters(query:tags:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "A43070C7-16F4-4F0E-8FE5-8366337DA422 - 2bb04b94aad5ddf7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (NUSpots.Space) -&gt; Swift.Bool in NUSpots.ResultsViewController.updateFilters(query: Swift.String, tags: Swift.Array&lt;Swift.String&gt;) -&gt; ()"
-                  moduleName = "NUSpots"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/blake/Documents/OneDrive/Documents/Sophomore%20College/Spring/IS%204300/NUSpots/NUSpots/ResultsViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "1032">
-               </Location>
-               <Location
-                  uuid = "A43070C7-16F4-4F0E-8FE5-8366337DA422 - fabe474d0a96c190"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.String) -&gt; Swift.Bool in implicit closure #2 () throws -&gt; Swift.Bool in closure #2 (NUSpots.Space) -&gt; Swift.Bool in NUSpots.ResultsViewController.updateFilters(query: Swift.String, tags: Swift.Array&lt;Swift.String&gt;) -&gt; ()"
-                  moduleName = "NUSpots"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/blake/Documents/OneDrive/Documents/Sophomore%20College/Spring/IS%204300/NUSpots/NUSpots/ResultsViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "1161">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "80107F3F-781A-4AF0-AE66-916545B9627D"
+            uuid = "9A2C8CE6-A715-4F75-8FB0-4C38B87F610D"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -130,38 +82,22 @@
             endingLineNumber = "44"
             landmarkName = "updateFilters(query:tags:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "80107F3F-781A-4AF0-AE66-916545B9627D - 2bb04b94aad5ddf7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (NUSpots.Space) -&gt; Swift.Bool in NUSpots.ResultsViewController.updateFilters(query: Swift.String, tags: Swift.Array&lt;Swift.String&gt;) -&gt; ()"
-                  moduleName = "NUSpots"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/blake/Documents/OneDrive/Documents/Sophomore%20College/Spring/IS%204300/NUSpots/NUSpots/ResultsViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "1032">
-               </Location>
-               <Location
-                  uuid = "80107F3F-781A-4AF0-AE66-916545B9627D - fabe474d0a96c190"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.String) -&gt; Swift.Bool in implicit closure #2 () throws -&gt; Swift.Bool in closure #2 (NUSpots.Space) -&gt; Swift.Bool in NUSpots.ResultsViewController.updateFilters(query: Swift.String, tags: Swift.Array&lt;Swift.String&gt;) -&gt; ()"
-                  moduleName = "NUSpots"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/blake/Documents/OneDrive/Documents/Sophomore%20College/Spring/IS%204300/NUSpots/NUSpots/ResultsViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "1161">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "80733900-755F-4219-9D77-4F60E722B855"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NUSpots/TutorialPageViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "generateTutorialControllers()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

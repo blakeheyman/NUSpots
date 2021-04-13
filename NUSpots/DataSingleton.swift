@@ -30,7 +30,7 @@ class DataSingleton {
                         available.append(cur!)
                     }
                 }
-                self.buildings = available
+                self.buildings = available.sorted(by: { (b1: Building, b2: Building) -> Bool in b1.distance < b2.distance })
             } catch {
                 // handle error
             }

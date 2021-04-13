@@ -66,12 +66,13 @@ class FilterViewController: UIViewController {
                 }
             }
         }
+        tags.removeLast()
         searchDelegate.searchTagsView.removeAllTags()
         searchDelegate.searchTagsView.addTags(tags)
         searchDelegate.tags = tags
         DataSingleton.sharedInstance.sections = filterTVC.sections
         self.searchDelegate.updateFilters(query: searchDelegate.query, tags: tags)
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil/*{ NotificationBanner.show("Filters applied", color: UIColor(named: "NU Turquoise") ?? UIColor.systemRed) }*/)
     }
     
     @IBAction func clearAllPressed(_ sender: UIButton) {
@@ -79,7 +80,6 @@ class FilterViewController: UIViewController {
     }
     
     private func clearAll() {
-        print("cleared")
         filterTVC.clearRows()
         filterTVC.tableView.reloadData()
     }

@@ -72,6 +72,11 @@ class MapRecommendedViewController: ListedSpacesViewController {
         mapVC.performSegue(withIdentifier: "fave-to-space", sender: (building, space))
     }
     
+    override func numberOfSections(_ tableView: UITableView) -> Int {
+        return 3
+    }
+    
+    
 //    // Collapse by default
 //    override func shouldCollapseByDefault(_ tableView: UITableView) -> Bool {
 //        return true

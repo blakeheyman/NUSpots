@@ -48,6 +48,11 @@ class FavoritesViewController: ListedSpacesViewController {
         let building = buildings[indexPath.section]
         performSegue(withIdentifier: "fave-to-space", sender: (building, space))
     }
+    @IBAction func questionTapped(_ sender: Any) {
+        let alert = UIAlertController(title: "Adding Favorites", message: "Favorites can be added by clicking the star icon next to any space in the Map and Search tabs.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
     
     @IBAction func sortTapped(_ sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "Sort favorites by", message: nil, preferredStyle: .actionSheet)

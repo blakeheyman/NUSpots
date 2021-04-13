@@ -28,6 +28,7 @@ class ListedSpacesViewController: CollapsibleTableSectionViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         self.tableView.reloadData()
     }
     
@@ -65,6 +66,14 @@ extension ListedSpacesViewController: CollapsibleTableSectionDelegate {
         cell.space = space
         cell.textLabel?.text = space.name
       return cell
+    }
+    
+    func collapsibleTableView(_ tableView: UITableView, distanceForHeaderInSection section: Int) -> Int {
+        let building = self.buildings[section]
+        let meters = building.distance
+        let feet = meters * 3.281
+        
+        return Int(feet)
     }
     
     // Collapse by default

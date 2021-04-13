@@ -18,6 +18,7 @@ import UIKit
     @objc optional func collapsibleTableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
     @objc optional func collapsibleTableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat
     @objc optional func collapsibleTableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
+    @objc optional func collapsibleTableView(_ tableView: UITableView, distanceForHeaderInSection section: Int) -> Int
     @objc optional func collapsibleTableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     @objc optional func shouldCollapseByDefault(_ tableView: UITableView) -> Bool
     @objc optional func shouldCollapseOthers(_ tableView: UITableView) -> Bool
@@ -74,6 +75,9 @@ open class CollapsibleTableSectionViewController: UIViewController {
         _tableView.dataSource = self
         _tableView.delegate = self
         
+        // Style
+        _tableView.separatorStyle = .none
+        
         // Auto resizing the height of the cell
         _tableView.estimatedRowHeight = 44.0
         _tableView.rowHeight = UITableView.automaticDimension
@@ -121,9 +125,12 @@ extension CollapsibleTableSectionViewController: UITableViewDataSource, UITableV
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "header") as? CollapsibleTableViewHeader ?? CollapsibleTableViewHeader(reuseIdentifier: "header")
         
         let title = delegate?.collapsibleTableView?(tableView, titleForHeaderInSection: section) ?? ""
+        let distance = delegate?.collapsibleTableView?(tableView, distanceForHeaderInSection: section) ?? -1
         
+        header.distanceLabel.isHidden = distance < 0
+        
+        header.distanceLabel.text = "\(distance) ft"
         header.titleLabel.text = title
-        header.arrowLabel.text = ">"
         header.setCollapsed(isSectionCollapsed(section))
         
         header.section = section

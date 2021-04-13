@@ -20,6 +20,8 @@ class SpaceViewController: UIViewController {
     @IBOutlet weak var spaceTagView: TagListView!
     @IBOutlet weak var starImageView: UIImageView!
     @IBOutlet weak var starLabel: UILabel!
+    @IBOutlet weak var distanceView: UIView!
+    @IBOutlet weak var spaceHeightConstraint: NSLayoutConstraint!
     
     var building: Building!
     var space: Space!
@@ -41,17 +43,22 @@ class SpaceViewController: UIViewController {
         let distanceInMeters = Measurement(value: building.distance, unit: UnitLength.meters)
         let distanceInFeet = distanceInMeters.converted(to: .feet)
         self.distanceLabel.text = "\(Int(distanceInFeet.value)) ft"
+        if distanceInFeet.value < 0 {
+            distanceView.isHidden = true
+            spaceHeightConstraint.constant = 0
+            distanceLabel.isHidden = true
+        }
+        else {
+            distanceView.isHidden = false
+            spaceHeightConstraint.constant = 60
+            distanceLabel.isHidden = false
+        }
         
         self.hoursLabel.text = getHours()
         
         spaceTagView.textFont = .systemFont(ofSize: 16)
         spaceTagView.addTags(space.tags.map({$0.capitalized}))
         
-        // TODO hours
-        
-        // TODO distance
-        
-        // TODO Tags
         
         // Do any additional setup after loading the view.
     }

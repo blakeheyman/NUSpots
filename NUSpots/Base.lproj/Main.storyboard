@@ -111,8 +111,8 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="z9b-Xm-Rwu">
                                 <rect key="frame" x="0.0" y="253" width="414" height="290"/>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommended spaces near you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFp-xg-D0X">
-                                <rect key="frame" x="10" y="553" width="206.5" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top 3 recommended buildings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFp-xg-D0X">
+                                <rect key="frame" x="10" y="553" width="196" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" name="NU Light Text"/>
                                 <nil key="highlightedColor"/>
@@ -200,6 +200,7 @@
                         <outlet property="quietImageView" destination="f2T-hc-tm8" id="Xrh-sR-kLw"/>
                         <segue destination="4sX-MD-a24" kind="show" identifier="fave-to-space" id="f1L-iE-m3N"/>
                         <segue destination="TNg-42-p8Z" kind="show" identifier="map-to-search" id="CGS-o8-Gvb"/>
+                        <segue destination="QOE-Sl-97H" kind="presentation" identifier="tutorial" modalPresentationStyle="fullScreen" id="QzD-1J-JcQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -420,7 +421,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Type to search for a space" translatesAutoresizingMaskIntoConstraints="NO" id="4j4-a7-YFz">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Type to search for a building" translatesAutoresizingMaskIntoConstraints="NO" id="4j4-a7-YFz">
                                 <rect key="frame" x="10" y="108" width="394" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
@@ -524,7 +525,7 @@
             <objects>
                 <viewController id="Liv-dw-PEt" customClass="FilterViewController" customModule="NUSpots" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yJD-AO-nX4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u04-vv-tVP">
@@ -804,7 +805,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Global-FavoritesStar-Unselected-Light" highlightedImage="Global-Favorites-Selected-Light" translatesAutoresizingMaskIntoConstraints="NO" id="4T4-MZ-QiS">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Global-FavoritesStar-Unselected-Light" highlightedImage="Global-FavoriteStar-Light" translatesAutoresizingMaskIntoConstraints="NO" id="4T4-MZ-QiS">
                                 <rect key="frame" x="344" y="108" width="30" height="30"/>
                                 <color key="tintColor" name="NU Red"/>
                                 <constraints>
@@ -864,8 +865,10 @@
                         <outlet property="buildingLabel" destination="d3z-Dq-C7j" id="2yK-Ac-YZX"/>
                         <outlet property="capacityLabel" destination="IFE-6g-7ZY" id="RN7-4c-CXf"/>
                         <outlet property="distanceLabel" destination="pj4-ah-bNX" id="fZj-uS-oEK"/>
+                        <outlet property="distanceView" destination="ubB-VJ-8OA" id="Liy-0l-eXw"/>
                         <outlet property="hoursLabel" destination="8ui-gw-Tcs" id="45Z-ej-guB"/>
                         <outlet property="mapButton" destination="zC3-Uc-7iS" id="PUK-5Z-Jwi"/>
+                        <outlet property="spaceHeightConstraint" destination="ykk-nC-6m5" id="coG-fm-yIG"/>
                         <outlet property="spaceLabel" destination="44k-Jx-MIN" id="86j-Cb-mYA"/>
                         <outlet property="spaceTagView" destination="3Cq-yV-8LT" id="v0J-yq-Ih5"/>
                         <outlet property="starImageView" destination="4T4-MZ-QiS" id="Gp3-au-w2x"/>
@@ -887,9 +890,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Favorites" id="Far-fL-JIF">
-                        <barButtonItem key="rightBarButtonItem" title="Sort" id="Yee-1N-gOA">
+                        <barButtonItem key="leftBarButtonItem" title="Sort" id="Yee-1N-gOA">
                             <connections>
                                 <action selector="sortTapped:" destination="EzF-XR-UaC" id="P3S-fb-euT"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="questionmark.circle" catalog="system" id="b6q-C9-Tvr">
+                            <connections>
+                                <action selector="questionTapped:" destination="EzF-XR-UaC" id="UAd-aq-JKw"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -932,6 +940,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="A8w-RK-c2x">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="NU Red"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1005,6 +1014,14 @@
             </objects>
             <point key="canvasLocation" x="853.62318840579712" y="-226.33928571428569"/>
         </scene>
+        <!--Tutorial Page View Controller-->
+        <scene sceneID="aWX-xj-WeG">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="QOE-Sl-97H" customClass="TutorialPageViewController" customModule="NUSpots" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vx8-Fe-JBv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9" y="-581"/>
+        </scene>
         <!--Map-->
         <scene sceneID="pRC-J5-d3R">
             <objects>
@@ -1014,6 +1031,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BfS-j9-335">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="NU Red"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1035,10 +1053,10 @@
     </designables>
     <inferredMetricsTieBreakers>
         <segue reference="f1L-iE-m3N"/>
-        <segue reference="CGS-o8-Gvb"/>
+        <segue reference="34M-AZ-Md8"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="Global-Favorites-Selected-Light" width="29.5" height="29.5"/>
+        <image name="Global-FavoriteStar-Light" width="25" height="24"/>
         <image name="Global-FavoritesStar-Unselected-Light" width="25" height="24"/>
         <image name="Global-Map-Selected-Light" width="24.5" height="25.5"/>
         <image name="Global-Settings-Selected-Light" width="26" height="26"/>
@@ -1050,6 +1068,7 @@
         <image name="location" catalog="system" width="128" height="121"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="questionmark.circle" catalog="system" width="128" height="121"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="NU Dark Text">
             <color red="0.0080000003799796104" green="0.0080000003799796104" blue="0.0080000003799796104" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

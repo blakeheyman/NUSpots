@@ -65,24 +65,28 @@ class MapViewController: UIViewController {
 //                spaces.append(s)
 //            }
 //        }
+        
+        if UserDefaults.standard.bool(forKey: "tutorialComplete") != true {
+            self.performSegue(withIdentifier: "tutorial", sender: self)
+        }
 
         // Do any additional setup after loading the view.
     }
     
     @objc func quickSearch0pressed() {
-        self.performSegue(withIdentifier: "map-to-search", sender: ("", ["Food allowed", "1 seat available"]))
+        self.performSegue(withIdentifier: "map-to-search", sender: ("", ["Food allowed"]))
     }
     
     @objc func quickSearch1pressed() {
-        self.performSegue(withIdentifier: "map-to-search", sender: ("", ["Good for groups", "1 seat available"]))
+        self.performSegue(withIdentifier: "map-to-search", sender: ("", ["Good for groups"]))
     }
     
     @objc func quickSearch2pressed() {
-        self.performSegue(withIdentifier: "map-to-search", sender: ("", ["Classroom", "1 seat available"]))
+        self.performSegue(withIdentifier: "map-to-search", sender: ("", ["Classroom"]))
     }
     
     @objc func quickSearch3pressed() {
-        self.performSegue(withIdentifier: "map-to-search", sender: ("", ["Quiet spot", "1 seat available"]))
+        self.performSegue(withIdentifier: "map-to-search", sender: ("", ["Quiet spot"]))
     }
     
 

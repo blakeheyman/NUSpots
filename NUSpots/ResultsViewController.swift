@@ -29,18 +29,17 @@ class ResultsViewController: ListedSpacesViewController {
     func updateFilters(query: String, tags: [String]) {
         // Get the filtered favorites list
         
-        let tagMatch = { (s: Space) -> Bool in s.name.starts(with: query) && tags.allSatisfy({ s.tags.contains($0.lowercased())
-            || ($0 == tags.last
-                    && Int($0) ?? 1 < s.capacity - s.occupancy)
-        }) }
+//        let tagMatch = { (s: Space) -> Bool in s.name.starts(with: query) && tags.allSatisfy({ s.tags.contains($0.lowercased())
+//            || ($0 == tags.last
+//                    && Int($0) ?? 1 < s.capacity - s.occupancy)
+//        }) }
         // Get the filtered favorites list
         let buildings = DataSingleton.sharedInstance.buildings
         var filtered: [Building] = []
         for b in buildings {
             let f = b.filterSpaces(predicate:
                                     { (s: Space) -> Bool in (b.name.starts(with: query) || s.name.starts(with: query)) && tags.allSatisfy({ s.tags.contains($0.lowercased())
-                                        || ($0 == tags.last
-                                                && Int($0.prefix(1)) ?? 1 <= s.capacity - s.occupancy)
+                                        || (Int($0.prefix(1)) != nil && Int($0.prefix(1))! <= s.capacity - s.occupancy)
                                     }) })
             if f != nil { filtered.append(f!) }
         }

@@ -10,7 +10,7 @@ import TagListView
 
 class SearchViewController: UIViewController, UISearchBarDelegate {
     
-    var tags: [String] = ["1 seat available"]
+    var tags: [String] = []
     var query: String = ""
     var resultsVC: ResultsViewController!
     @IBOutlet weak var searchBar: UISearchBar!
