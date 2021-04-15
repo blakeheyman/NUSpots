@@ -39,6 +39,7 @@ class TutorialPageViewController: UIPageViewController {
         self.pageControl.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
         self.pageControl.pageIndicatorTintColor = UIColor.lightGray
         self.pageControl.currentPageIndicatorTintColor = UIColor.red
+        self.pageControl.isUserInteractionEnabled = false
 //        self.pageControl.layer.shadowRadius = 10
 //        self.pageControl.layer.shadowOffset = CGSize(width: 5, height: 5)
 //        self.pageControl.layer.shadowColor = UIColor.black.cgColor

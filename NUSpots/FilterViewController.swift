@@ -66,7 +66,6 @@ class FilterViewController: UIViewController {
                 }
             }
         }
-        tags.removeLast()
         searchDelegate.searchTagsView.removeAllTags()
         searchDelegate.searchTagsView.addTags(tags)
         searchDelegate.tags = tags

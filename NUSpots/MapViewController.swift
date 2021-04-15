@@ -21,6 +21,7 @@ class MapViewController: UIViewController {
     @IBOutlet weak var groupsImageView: UIImageView!
     @IBOutlet weak var classroomImageView: UIImageView!
     @IBOutlet weak var quietImageView: UIImageView!
+    @IBOutlet weak var top3Label: UILabel!
     
     var recommendedVC: MapRecommendedViewController?
     
@@ -38,6 +39,7 @@ class MapViewController: UIViewController {
             let viewRegion = MKCoordinateRegion(center: userLocation, latitudinalMeters: 200, longitudinalMeters: 200)
             mapView.setRegion(viewRegion, animated: false)
             mapView.showsUserLocation = true
+            top3Label.text = "Top 3 recommended buildings near your location"
         }
         
         else {
